@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Beni Seviyor musun</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #fff0f5;
+      font-family: Arial;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 15px 30px;
+      margin: 10px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #seviyorum {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    #sevmiyorum {
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="mesaj">Beni seviyor musun? 💭</h1>
+
+  <div>
+    <button id="seviyorum" onclick="seviyorum()">Seni seviyorum ❤️</button>
+    <button id="sevmiyorum" onclick="sevmiyorum()">Seni sevmiyorum 🙃</button>
+  </div>
+
+  <script>
+    let sayac = 0;
+
+    const mesajlar = [
+      "Emin misin? 🤔",
+      "Bir daha düşün 😌",
+      "Gerçekten mi? 😢",
+      "Kalbimi kırıyorsun 💔",
+      "Son kararın mı? 😳",
+      "Bak pişman olursun 😏"
+      "Enes bey üzüldü :(  "
+      "AAA YETER LAN BAS ŞU TUŞA"
+    ];
+
+    function sevmiyorum() {
+      document.getElementById("mesaj").innerText =
+        mesajlar[sayac % mesajlar.length];
+      sayac++;
+    }
+
+    function seviyorum() {
+      document.getElementById("mesaj").innerText =
+        "Ben de seni seviyorum 💖💖💖";
+    }
+  </script>
+
+</body>
+</html>
+
